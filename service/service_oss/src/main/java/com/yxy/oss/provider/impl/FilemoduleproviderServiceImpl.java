@@ -21,8 +21,8 @@ import java.util.UUID;
 @Service(interfaceClass = FilemoduleproviderService.class, protocol = {"osshessian"})
 public class FilemoduleproviderServiceImpl  implements FilemoduleproviderService {
     String endPoint = "oss-cn-beijing.aliyuncs.co";
-    String accessKeyId ="LTAI4FztaeQaYLoxJbFUcK4H" ;
-    String accessKeySecret ="jubKSKQabSTcWo9ZvdmjRPXE9UaY4g";
+    String accessKeyId ="你的AccessKey" ;
+    String accessKeySecret ="你的accessKeySecret";
     String bucketName ="selfavatar-file";
     @Override
     public List<String> upload(MultipartFile[] files) {
