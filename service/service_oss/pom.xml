@@ -12,29 +12,23 @@
     <artifactId>service_oss</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.aliyun.oss</groupId>
-            <artifactId>aliyun-sdk-oss</artifactId>
-        </dependency>
-        <!-- 日期工具栏依赖 -->
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-        </dependency>
 
-        <!--hessian协议-->
-        <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <!--dubbo hessian协议-->
         <dependency>
             <groupId>com.caucho</groupId>
             <artifactId>hessian</artifactId>
-            <version>4.0.63</version>
+            <version>4.0.7</version>
         </dependency>
 
         <!--dubbo多协议配置jetty包-->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
-            <version>11.0.0</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -44,12 +38,34 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>11.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
-            <version>11.0.0</version>
         </dependency>
-    </dependencies>
-</project>
+
+        <!--
+        <dependency>
+              <groupId>com.caucho</groupId>
+              <artifactId>hessian</artifactId>
+              <version>4.0.7</version>
+          </dependency>
+          <dependency>
+              <groupId>org.mortbay.jetty</groupId>
+              <artifactId>jetty</artifactId>
+              <version>6.1.26</version>
+          </dependency>-->
+      </dependencies>
+     <build>
+         <plugins>
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <configuration>
+                     <classifier>exec</classifier>
+                     <!--  <skip>true</skip>-->
+                 </configuration>
+             </plugin>
+         </plugins>
+      </build>
+     </project>
